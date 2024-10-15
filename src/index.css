@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", system-ui;
+}
+
+*::selection {
+  background: #cd4631;
+  color: #f7ede8;
+}
+.row-gap {
+  row-gap: 10px;
+}
+
+.custom-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 70%;
+  height: 8px;
+  margin-top: 20px;
+  background: #ddd;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Changing the thumb (handle) of the slider */
+.custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #cd4631;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.custom-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #cd4631;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.3s;
+}
+
+/* Add hover or active state effects */
+.custom-slider::-webkit-slider-thumb:hover {
+  background: #cd4631;
+  transform: scale(1.1);
+}
+
+.custom-slider::-moz-range-thumb:hover {
+  background: #cd4631;
+  transform: scale(1.1);
+}
+
+/* Customizing the track fill before the thumb */
+.custom-slider::-webkit-slider-runnable-track {
+  /* background: linear-gradient(90deg, #cd4631 0%, #cd4631 50%, #ddd 50%); */
+  height: 8px;
+  border-radius: 5px;
+}
+
+.custom-slider::-moz-range-progress {
+  background: #cd4631;
+  height: 8px;
+  border-radius: 5px;
+}
+
+/* Customizing the track behind the thumb */
+.custom-slider::-moz-range-track {
+  background: #ddd;
+  height: 8px;
+  border-radius: 5px;
+}
